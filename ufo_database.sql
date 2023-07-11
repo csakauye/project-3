@@ -1,7 +1,7 @@
 DROP TABLE ufo;
 
 CREATE TABLE ufo (
-	" " INT,
+	" " INT PRIMARY KEY,
 	"Country" VARCHAR,
 	"City" VARCHAR, 
 	"State" VARCHAR,
@@ -14,3 +14,5 @@ CREATE TABLE ufo (
 
 SELECT * FROM ufo
 
+ALTER TABLE ufo
+RENAME COLUMN "Clean Date" to "Clean_Date";
