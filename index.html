@@ -2,7 +2,7 @@
 <html lang = "en">
     <head>
         <meta charset="utf-8">
-        <title>Geo JSON</title>
+        <title>Project 3</title>
       
         <!-- Leaflet CSS -->
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
@@ -22,11 +22,21 @@
       </head>
       
       <body>
-        <!-- The div where we'll insert our map -->
-        <div id="map"></div>
-        <!--Divs for holding our graphs-->
-        <div id = "graph1"></div>
-        <div id = "graph2"></div>
+        <div id="header">
+          <h2 class= "title">The Truth is Out There</h2>
+        </div>
+        <div class="topnav">
+          <ul id="links">
+            <a href="#">Map</a>
+            <a href="#">Trends</a>
+            <a href="#">About</a>
+          </ul>
+        </div>
+        
+        <div class="map-container">
+          <div id="map"></div>
+        </div>
+
       
         <!-- JavaScript file -->
         <script type="text/javascript" src="logic.js"></script>

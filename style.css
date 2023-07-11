@@ -1,11 +1,43 @@
 body {
-    padding: 0;
+    padding: 15;
     margin: 0;
+    font-family:"Lucida Console", "Courier New", monospace;
+    background-image: url("./greengrid.jpg");
+    color: #09ff00;
+    
   }
-  
-  #map,
-  body,
-  html {
-    height: 100%;
+  /*Style map*/
+  #map {
+    position: absolute;
+    top: 110px; 
+    left: 25px;
+    right: 25px;
+    bottom: 50px;
   }
-  
+.leaflet-layer,
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out,
+.leaflet-control-attribution {
+  filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);}
+/*Style title*/ 
+  h2{
+    padding-left: 15px;
+    
+  }
+/*Style navbar and links*/
+ a{
+  color: #09ff00;
+  text-align: center;
+ }
+ #links{
+  text-align: center;
+  border:dotted;
+  border-color: #09ff00;
+  padding: 10px;
+}
+/*Style popup text*/
+h3,p {
+  text-align: center;
+  font-family:"Lucida Console", "Courier New", monospace;
+}
+

@@ -12,8 +12,9 @@ let ufoData = 0;
 
 function createMap(ufos, light, circle, triangle, fireball, other) {
   // Creating tile layer 
-  let streetmap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  let streetmap = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    className: 'map-tiles'
 });
 
   // Creating base object to hold streetmap
@@ -69,7 +70,7 @@ function createUfos(data) {
         fillOpacity: 0.5,
         color: colorPicker(alien.Shape),
         radius: 40000
-      }).bindPopup("<h3> Description of Encounter: " + alien.Summary + "</h3>");
+      }).bindPopup("<h3> Description of Encounter: </h3>" +"<p>"+ alien.Summary + "</p>");
     
     // Putting ufos into separate layers based on shape
     if (alien.Shape == "Light") lights.push(ufoMarker);
