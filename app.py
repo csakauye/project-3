@@ -8,6 +8,7 @@ from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine,func, desc
 from flask import Flask,jsonify
+from flask_cors import CORS
 
 
 engine = create_engine("postgresql+psycopg2://postgres:postgres@localhost:5432/ufo")
@@ -21,7 +22,7 @@ ufo = Base.classes.ufo
 # Flask Setup
 ############################################
 app = Flask(__name__)
-
+CORS(app)
 
 ###########################################
 # Flask Routes
