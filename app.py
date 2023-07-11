@@ -1,8 +1,7 @@
-
+#Import dependencies 
 import pandas as pd
 import datetime as dt
 import numpy as np
-
 import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
@@ -10,14 +9,15 @@ from sqlalchemy import create_engine,func, desc
 from flask import Flask,jsonify
 from flask_cors import CORS
 
-
+#create connection to postgres database
 engine = create_engine("postgresql+psycopg2://postgres:postgres@localhost:5432/ufo")
 
+#reflect table
 session = Session(engine)
 Base = automap_base()
 Base.prepare(autoload_with=engine)
-
 ufo = Base.classes.ufo
+
 ############################################
 # Flask Setup
 ############################################
@@ -37,8 +37,10 @@ def home():
 ###############
 @app.route("/api/ufo")
 def ufos():
+    #pull results from api and close session
     results= session.query(ufo.Country,ufo.City,ufo.State,ufo.Shape,ufo.Summary,ufo.lat,ufo.lng,ufo.Clean_Date)
     session.close()
+    #initialize
     all_ufos = []
     for country,city,state,shape,summary,lat,lng, clean_date in results:
         ufo_dict = {}
