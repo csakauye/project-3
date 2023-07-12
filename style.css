@@ -41,3 +41,8 @@ h3,p {
   font-family:"Lucida Console", "Courier New", monospace;
 }
 
+#graph{
+  width: 500px !important; 
+  height: 500px !important;
+  color: #f1f1f1 !important;
+}
