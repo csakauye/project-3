@@ -6,10 +6,14 @@ body {
     color: #09ff00;
     
   }
+  #ufo{
+    height: 10px;
+    width: 10px;
+  }
   /*Style map*/
   #map {
     position: absolute;
-    top: 110px; 
+    top: 150px; 
     left: 25px;
     right: 25px;
     bottom: 50px;
@@ -24,10 +28,7 @@ body {
     padding-left: 15px;
     
   }
-.graph-title{
-  color:black;
-  
-}
+
 /*Style navbar and links*/
  a{
   color: #09ff00;
@@ -52,22 +53,42 @@ h3,p {
   display:flex;
   flex-wrap: wrap;
   flex-direction: row;
-  background-color: #ccfcb6;
-  border: outset;
-  border-color: #09ff00;
-  border-width: thick;
+  
   
 }
+
 #pie{
   width: 500px !important; 
   height: 500px !important;
   top:0;
   padding-left:20 !important;
+  background-color: #ccfcb6 !important;
+  border: outset !important;
+  border-color: #09ff00 !important;
+  border-width: thick !important;
+  
+  
   
 }
 #bar{
   width: 800px !important;
   height: 400px !important;
-  top:50px !important;
-  padding-left: 200px !important;
+  padding-top:70px !important;
+  /* padding-left: 200px !important; */
+  background-color: #ccfcb6 !important;
+  border: outset !important;
+  border-color: #09ff00 !important;
+  border-width: thick !important;
+  margin-left: 100px !important;
+  
+}
+#line{
+  width: 800px !important;
+  height: 400px !important;
+  padding-left: 100px !important;
+  background-color: #ccfcb6 !important;
+  border: outset !important;
+  border-color: #09ff00 !important;
+  border-width: thick !important;
+  
 }

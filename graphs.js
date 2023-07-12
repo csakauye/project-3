@@ -1,6 +1,11 @@
+
+//Set url for API and initialize variable to hold data
 let url = "http://127.0.0.1:5000/api/ufo";
 let ufo = ""
+
+//Make an API Call
 d3.json(url).then(function(data){ufo=data
+  //Initialize empty lists to count shapes 
     let lights = 0;
     let circles = 0;
     let triangles = 0;
@@ -8,7 +13,7 @@ d3.json(url).then(function(data){ufo=data
     let others = 0;
     
     let alien = ""
-    
+  //loop through data to count shapes 
     for(let i = 0;i<ufo.length;i++){
         alien = ufo[i]
         if (alien.Shape == "Light") lights+=1;
@@ -17,15 +22,17 @@ d3.json(url).then(function(data){ufo=data
         else if (alien.Shape == "Fireball") fireballs+=1;
         else others+=1;
     }
-    
+  //add number of shapes to list 
     let shapes = []
     shapes.push(lights);
     shapes.push(circles);
     shapes.push(triangles);
     shapes.push(fireballs);
     shapes.push(others);
-    
-    console.log(shapes)    
+
+  //checking to see if it completed
+    console.log(shapes)
+  //Creating a pie chart of shapes   
     new Chart(document.getElementById("pie"), {
         type: 'pie',
         data: {
@@ -48,6 +55,8 @@ d3.json(url).then(function(data){ufo=data
           }
         }
     });
+  
+  // Initializing empty lists to count states 
   let CA   = 0;	
   let FL	 = 0;
   let AZ	 = 0;
@@ -59,6 +68,7 @@ d3.json(url).then(function(data){ufo=data
   let OR	 = 0;
   let OH   = 0;
 
+  //Looping through the data to count occurrences of states  
   for(let i = 0; i < ufo.length;i++){
     sighting = ufo[i];
     if(sighting.State == "CA") CA +=1;
@@ -71,7 +81,9 @@ d3.json(url).then(function(data){ufo=data
     else if(sighting.State == "PA") PA +=1;
     else if(sighting.State == "OR") OR +=1;
     else if(sighting.State == "OH") OH +=1;
-  }
+  };
+
+  //Pushing those to a list 
   let states = []
   states.push(CA)
   states.push(FL)
@@ -84,7 +96,9 @@ d3.json(url).then(function(data){ufo=data
   states.push(OR)
   states.push(OH)
 console.log(`State ` + states)
-// Bar chart
+
+
+// Make Bar chart of most common states 
 new Chart(document.getElementById("bar"), {
   type: 'bar',
   data: {
@@ -107,9 +121,39 @@ new Chart(document.getElementById("bar"), {
         labels: {color:"#f1f1f1"},
         display: false
     }}
-    
-    
-}})
+  }});
+
+  //Initialize empty list for months
+months = [0,0,0,0,0,0,0,0,0,0,0,0]
+  for(let i = 0;i < ufo.length;i++){
+    sighting = ufo[i];
+    date = new Date(Date.parse(sighting.Clean_Date));
+    month = date.getMonth();
+    months[month] +=1;
+    console.log(typeof date)
+   
+
+  };
+  console.log("These are the dates " + months);
+  
+  new Chart("line", {
+    type: "line",
+    data: {
+      labels: ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug",'Sept',"Oct","Nov","Dec"],
+      datasets: [{ 
+          data: months,
+          label: "Sightings",
+          borderColor: "Orchid",
+          fill: false
+        }]},
+    options:{
+      legend: {
+        labels: {color:"#f1f1f1"},
+        display: false
+    }
+    }
+  });
+
   
   
   
