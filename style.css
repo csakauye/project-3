@@ -64,8 +64,8 @@ h3,p {
 }
 .graph-title.line{
   padding-left: 500px;
-  padding-top:100px;
-  margin-top: 100px;
+  padding-top:50px;
+  margin-top: 50px;
 }
 
 #pie{
@@ -75,7 +75,7 @@ h3,p {
   padding-left:20 !important;
   background-color: #ccfcb6 !important;
   border: outset !important;
-  border-color: #09ff00 !important;
+  border-color: #07ce00 !important;
   border-width: thick !important;
   margin-left: 200px !important;
   
@@ -89,7 +89,7 @@ h3,p {
   /* padding-left: 200px !important; */
   background-color: #ccfcb6 !important;
   border: outset !important;
-  border-color: #09ff00 !important;
+  border-color: #07ce00 !important;
   border-width: thick !important;
   margin-left: 200px !important;
   /* margin-top: 120px !important; */
@@ -101,7 +101,7 @@ h3,p {
   /* padding-left: 100px !important; */
   background-color: #ccfcb6 !important;
   border: outset !important;
-  border-color: #09ff00 !important;
+  border-color: #07ce00 !important;
   border-width: thick !important;
   margin-left:500px !important;
   /* margin-top: 100px !important; */
