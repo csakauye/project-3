@@ -7,16 +7,17 @@ body {
     
   }
   #ufo{
-    height: 10px;
-    width: 10px;
+    height: 70px;
+    width: 500px;
+    padding-top: 20px;
   }
   /*Style map*/
   #map {
     position: absolute;
-    top: 150px; 
+    top: 200px; 
     left: 25px;
     right: 25px;
-    bottom: 50px;
+    bottom: 25px;
   }
 .leaflet-layer,
 .leaflet-control-zoom-in,
@@ -26,7 +27,12 @@ body {
 /*Style title*/ 
   h2{
     padding-left: 15px;
+    display: inline-block;
     
+  }
+  h4{
+    text-align: center;
+
   }
 
 /*Style navbar and links*/
@@ -66,6 +72,9 @@ h3,p {
   padding-left: 500px;
   padding-top:50px;
   margin-top: 50px;
+}
+footer{
+  padding-top: 750px;
 }
 
 #pie{
