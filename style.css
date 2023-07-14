@@ -1,16 +1,15 @@
+
+/* General BOdy Styling */
 body {
     padding: 15;
     margin: 0;
     font-family:"Lucida Console", "Courier New", monospace;
     background-image: url("./greengrid.jpg");
     color: #09ff00;
+    cursor: url("./green_neon_normalselect.cur"), auto;
     
   }
-  #ufo{
-    height: 70px;
-    width: 500px;
-    padding-top: 20px;
-  }
+
   /*Style map*/
   #map {
     position: absolute;
@@ -19,20 +18,21 @@ body {
     right: 25px;
     bottom: 25px;
   }
+
+/* Make map "dark mode" */
 .leaflet-layer,
 .leaflet-control-zoom-in,
 .leaflet-control-zoom-out,
 .leaflet-control-attribution {
-  filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);}
-/*Style title*/ 
+  filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
+}
+
+  /*Style titles*/ 
   h2{
     padding-left: 15px;
-    display: inline-block;
-    
   }
   h4{
     text-align: center;
-
   }
 
 /*Style navbar and links*/
@@ -40,43 +40,48 @@ body {
   color: #09ff00;
   text-align: center;
  }
+
  #links{
   text-align: center;
   border:dotted;
   border-color: #09ff00;
   padding: 10px;
 }
+
 /*Style popup text*/
 h3,p {
   text-align: center;
   font-family:"Lucida Console", "Courier New", monospace;
 }
+
+/* Style Graph containers and dashboard */
 .dashboard{
   position: relative;
 }
+
 .graph-container{
   /*position: absolute;*/
   display:flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  
-  
+  flex-direction: row;  
 }
+
+/*Style Graph Titles */
 .graph-title.pie{
   padding-left:200px;
 }
+
 .graph-title.bar{
   padding-left: 200px;
 }
+
 .graph-title.line{
   padding-left: 500px;
   padding-top:50px;
   margin-top: 50px;
 }
-footer{
-  padding-top: 750px;
-}
 
+/* Style Graphs */
 #pie{
   width: 500px !important; 
   height: 500px !important;
@@ -86,34 +91,40 @@ footer{
   border: outset !important;
   border-color: #07ce00 !important;
   border-width: thick !important;
-  margin-left: 200px !important;
-  
-  
-  
+  margin-left: 200px !important;  
 }
+
 #bar{
   width: 800px !important;
   height: 500px !important;
   padding-top:70px !important;
-  /* padding-left: 200px !important; */
   background-color: #ccfcb6 !important;
   border: outset !important;
   border-color: #07ce00 !important;
   border-width: thick !important;
-  margin-left: 200px !important;
-  /* margin-top: 120px !important; */
-  
+  margin-left: 200px !important;  
 }
+
 #line{
   width: 800px !important;
   height: 400px !important;
-  /* padding-left: 100px !important; */
   background-color: #ccfcb6 !important;
   border: outset !important;
   border-color: #07ce00 !important;
   border-width: thick !important;
   margin-left:500px !important;
-  /* margin-top: 100px !important; */
   margin-bottom: 100px !important;
+}
+
+/* Style About page and gifs */
+#description{
+  margin: 0px 150px 0px 100px;
+}
+
+#ufo{
+  padding-left: 880px;
   
+}
+#alien{
+  padding-left:900px;
 }
